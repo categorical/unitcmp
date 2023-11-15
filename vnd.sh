@@ -11,9 +11,7 @@ u='https://github.com/nesrak1/assetstools.net/archive/2207c788da.tar.gz'
 dn=dotnet
 _get(){
     [ -d "$vnd" ]||(set -x;mkdir "$vnd")
-    _g5
-}
-_g5(){
+    
     local c="$(mktemp -d)"
     declare -p c
     curl -L "$u" -o"$c/c"
@@ -35,7 +33,6 @@ EOF
     exit $1;}
     [ $# -gt 0 ]||_u 1;while [ $# -gt 0 ];do case $1 in
     --get)_get;;
-    --g5)_g5;;
     --clean)_clean;;
     -h)_u 0;;*)_u 1
     esac;shift;done

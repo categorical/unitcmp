@@ -57,7 +57,7 @@ namespace unitcmp{ class prog{
             "   {0} -cmp|-dcmp FLE...",
             "OPTION:",
             "   -cmp,--cmp      compress and write as FLE.cmp",
-            "   -dcmp,--dcmp    decompress as FLE.dcmp",
+            "   -dcmp,--dcmp    decompress as FLE.dcmp\r\n",
             }),System.IO.Path.GetFileName(Environment.GetCommandLineArgs()[0]));
             stderr(s);
             //Environment.Exit(v);
